@@ -7,5 +7,5 @@ import com.mx.empleados.model.Empleado;
 
 @Repository
 public interface EmpleadoRepository extends JpaRepository<Empleado, Integer>{
-
+	boolean existsByNumeroSeguro(String numeroSeguro);
 }
