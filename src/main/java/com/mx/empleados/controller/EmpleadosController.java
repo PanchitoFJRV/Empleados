@@ -69,7 +69,7 @@ public class EmpleadosController {
 	    return ResponseEntity.ok(empleado);
 	}
 	
-	@PutMapping(path = "id_empleado")
+	@PutMapping(path = "{id_empleado}")
 	public ResponseEntity<?> editar(@PathVariable("id_empleado")int id, @RequestBody Empleado empleado){
 		try {
 			Empleado editado = service.editar(id, empleado);
@@ -87,7 +87,7 @@ public class EmpleadosController {
 		}
 	}
 	
-	@DeleteMapping(path = "id_empleado")
+	@DeleteMapping(path = "{id_empleado}")
 	public ResponseEntity<?>eliminar(@PathVariable("id_empleado")int id){
 		Empleado eliminado = service.eliminar(id);
 		
